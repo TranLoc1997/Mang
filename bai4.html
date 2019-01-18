@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var nhap = prompt("nhap Giá Trị: ");
+		var mangssonguyen=[];
+		var cout=0;
+		for (var i = 0; i < nhap; i++) {
+			cout= prompt("nhap cac so: ");
+			mangssonguyen.push(cout);
+		}
+		document.write(mangssonguyen + "<br/>");
+		var first = 0;
+		var last = mangssonguyen.length - 1;
+		while (first < last) {
+		    var b = mangssonguyen[first];
+		    mangssonguyen[first] = mangssonguyen[last];
+		    mangssonguyen[last] = b;
+		    first++;
+		    last--;
+		}
+		document.write(mangssonguyen);		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var nhap =parseInt(prompt("nhap Giá Trị: "));
+		var mangssonguyen=[];
+		var cout=0;
+		for (var i = 0; i < nhap; i++) {
+			cout= parseInt(prompt("nhap cac so: "));
+			mangssonguyen.push(cout);
+		}
+		document.write(mangssonguyen + "<br/>");
+		var timx=0;
+		var nhap1 =parseInt( prompt("nhap Số: "));
+		for (var i = 0; i < mangssonguyen.length; i++) {
+			if (mangssonguyen[i] ===nhap1 )
+
+			{
+	      	timx++;	
+			}
+	    }
+	      	if (timx!=0) {
+	      		mangssonguyen[i]=mangssonguyen[i-1];
+	      		
+	      		document.write(mangssonguyen);
+
+	      	}
+		
+			else {
+	      		document.write(nhap1+" is not the array ");
+	      	}
+	</script>
+
+</body>
+</html>

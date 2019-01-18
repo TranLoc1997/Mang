@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	//bai1
+	var myColor = ["Red", "Green", "White", "Black"];
+	document.write(myColor.toString()+"<br/>");
+	document.write(myColor.join()+"<br/>");
+	document.write(myColor.join('+')+"<br/>");
+	document.write(myColor.toString()+"<br/>");
+
+	//bai2
+	var num = window.prompt();
+	var str = num.toString();
+	var result = [str[0]];
+
+	for (var x = 1; x < str.length; x++) {
+	  if (str[x - 1] % 2 === 0 && str[x] % 2 === 0) {
+	    result.push('-', str[x]);
+	  } else {
+	    result.push(str[x]);
+	  }
+	}
+	document.write(result.join(''));
+	console.log(result.join(''));
+
+	//bai3
+	var str = 'UPPER';
+	var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+	var result = [];
+	  
+	  for(let x=0; x<str.length; x++)
+	  {
+	    if(UPPER.indexOf(str[x]))
+	    {
+	      result.push(str[x].toLowerCase());
+	    }
+	    else if(LOWER.indexOf(str[x]))
+	    {
+	      result.push(str[x].toUpperCase());
+	    }
+	    else 
+	    {
+	      result.push(str[x]);
+	    }
+	  }
+	document.write(result.join(''));
+
+
+</script>
+</body>
+</html>
